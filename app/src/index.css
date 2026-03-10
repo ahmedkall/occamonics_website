@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --stax-bg: #002c39;
+  --stax-cyan: #1fd3ee;
+  --stax-cyan-hover: #11bbd5;
+  --stax-card: #dff0f5;
+  --stax-text: #001f2b;
+  --stax-muted: #597786;
+  --stax-border: rgba(255, 255, 255, 0.1);
+  --stax-container: 1280px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--stax-bg);
+  color: white;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--stax-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(31, 211, 238, 0.55);
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--stax-cyan);
+  color: var(--stax-text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.container-stax {
+  max-width: var(--stax-container);
+  margin: 0 auto;
+  padding-inline: 48px;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--stax-cyan);
+  color: var(--stax-text);
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: 24px;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--stax-cyan-hover);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 24px;
+  background: transparent;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(31, 211, 238, 0.55);
+  background: rgba(31, 211, 238, 0.09);
+}
+
+.btn-link {
+  color: var(--stax-cyan);
+}
+
+.btn-link:hover {
+  color: var(--stax-cyan-hover);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container-stax {
+    padding-inline: 24px;
+  }
+}
